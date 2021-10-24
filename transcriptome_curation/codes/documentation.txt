@@ -1,0 +1,22 @@
+Creating_the_transcriptome.py:
+Takes following folders as input:
+cdna,cds,ncrna,pep along with the fasta file in them.
+creates folder gene_details, gene_files and output_files as output and stores the files in them.
+
+Following is the terminal output;
+Extracting the gene details for:  cdna
+Extracting the gene details for:  cds
+Extracting the gene details for:  ncrna
+Extracting the gene details for:  pep
+Created the file for preprocessing of Ribosomal profiling data: 
+	that contains  1398  gene sequences which includes rRNA tRNA snRNA snoRNA and miRNA. 
+Created the file for non-coding RNA: 
+	that contains  4256  gene sequences which includes ncRNA and lncRNA. 
+Number of cdna sequences:  48359
+Number of cds sequences:  48321
+Number of CDS sequences that have a corresponding cDNA:  48321
+Number of genes that do not have a valid stop codon:  42
+Number of genes that have a length of CDS that is not a multiple of 3:  7
+Number of genes that have a small utr(<45):  6906
+Number of genes that have a small isr(<45):  25473
+Number of valid ISRs:  15893

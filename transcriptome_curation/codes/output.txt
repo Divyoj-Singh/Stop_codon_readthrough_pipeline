@@ -1,0 +1,40 @@
+Extracting the gene details for:  cdna
+Extracting the gene details for:  cds
+Extracting the gene details for:  ncrna
+Extracting the gene details for:  pep
+Created the file for preprocessing of Ribosomal profiling data: 
+	that contains  1398  gene sequences which includes rRNA tRNA snRNA snoRNA and miRNA. 
+Created the file for non-coding RNA: 
+	that contains  4256  gene sequences which includes ncRNA and lncRNA. 
+Number of cdna sequences:  48359
+Number of cds sequences:  48321
+Number of CDS sequences that have a corresponding cDNA:  48321
+Number of genes that do not have a valid stop codon:  42
+Number of genes that have a length of CDS that is not a multiple of 3:  7
+Number of genes that have a small utr(<45):  6906
+Number of genes that have a small isr(<45):  25473
+Number of valid ISRs:  15893
+
+
+Building a new DB, current time: 10/27/2019 14:11:41
+New DB name:   /media/csb/D/Plant_Readthrough/transcriptome_curation/output_files/blast_results/blast_db/plant_transcriptome_CDS_nucleotide
+New DB title:  ./../output_files/nucleotide/plant_transcriptome_CDS_nucleotide.fasta
+Sequence type: Nucleotide
+Deleted existing Nucleotide BLAST database named /media/csb/D/Plant_Readthrough/transcriptome_curation/output_files/blast_results/blast_db/plant_transcriptome_CDS_nucleotide
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 48272 sequences in 1.62256 seconds.
+
+
+Building a new DB, current time: 10/27/2019 14:11:43
+New DB name:   /media/csb/D/Plant_Readthrough/transcriptome_curation/output_files/blast_results/blast_db/plant_transcriptome_ISR_nucleotide
+New DB title:  ./../output_files/nucleotide/plant_transcriptome_ISR_nucleotide.fasta
+Sequence type: Nucleotide
+Deleted existing Nucleotide BLAST database named /media/csb/D/Plant_Readthrough/transcriptome_curation/output_files/blast_results/blast_db/plant_transcriptome_ISR_nucleotide
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 15893 sequences in 0.277738 seconds.
+# genes before blasting 15893
+# genes in which ISR matched with some part of CDS 1050
+# genes in which ISR matched with some part of other ISR 119
+# gens remaining after removing degenrate ISRs 14732

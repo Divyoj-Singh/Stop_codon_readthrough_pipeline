@@ -1,0 +1,50 @@
+Downloading through an ftp client is shown below with input commands underlined. For downloading through browsers, refer to Figures 1a and 1b in the PC setup document.
+
+$ ftp ftp.ncbi.nlm.nih.gov
+
+
+Connected to ftp.wip.ncbi.nlm.nih.gov.
+220-
+Warning Notice!
+This is a U.S. Government computer system, which may be accessed and used 
+[ ... extra warning message removed ... ]
+There is no right of privacy in this system.
+---
+Welcome to the NCBI ftp server! The official anonymous access URL is ftp://ftp.ncbi.nih.gov 
+Public data may be downloaded by logging in as "anonymous" using your E-mail
+address as a password.
+Please see ftp://ftp.ncbi.nih.gov/README.ftp for hints on large file transfers
+220 FTP Server ready.
+
+
+Name (ftp.ncbi.nlm.nih.gov:tao): anonymous
+
+331 Anonymous login ok, send your complete email address as your password.
+
+Password: [note: enter your email address at this prompt]
+
+230-Anonymous access granted, restrictions apply.
+Please read the file README.ftp
+230    it was last modified on Fri Mar 28 14:05:45 2008 - 716 days ago
+Remote system type is UNIX.
+Using binary mode to transfer files.
+
+ftp> cd blast/executables/LATEST/
+
+250 CWD command successful
+
+ftp> bin
+
+200 Type set to I
+
+ftp>ls
+gives a list of latest blast versions, choose the version u want and type in the next command. 
+
+ftp> get ncbi-blast-2.2.29+-x64-linux.tar.gz
+local: ncbi-blast-2.2.29+-x64-linux.tar.gz remote: ncbi-blast-2.2.29+-x64-linux.tar.gz
+227 Entering Passive Mode (130,14,29,30,215,39)
+150 Opening BINARY mode data connection for ncbi-blast-2.2.29+-x64-linux.tar.gz (158357911 bytes)
+226 Transfer complete
+158357911 bytes received in 2.88 secs (54996.76 Kbytes/sec)
+ftp> bye
+221 Goodbye.
