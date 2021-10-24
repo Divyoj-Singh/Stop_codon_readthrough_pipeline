@@ -1,0 +1,38 @@
+VERSIONS:
+fastp version: 0.20.0
+prefetch : 2.8.2
+ncbi-blast-2.9.0+
+samtools 1.7  Using htslib 1.7-2
+Bowtie2  version 2.3.5.1
+parallel-fastq-dump : 0.6.5   fastq-dump : 2.8.2
+7z 16.02
+
+parameters:
+
+fastp 
+-f --trim_front1 3   {trimming how many bases in front for read1, default is 0 (int [=0])}
+
+-3 --cut_tail 33     {move a sliding window from tail (3') to front, drop the bases in the window if its mean quality < threshold, stop otherwise.}
+
+-l 20                {--length_required reads shorter than length_required will be discarded, default is 15. (int [=15])}
+
+--trim_poly_x A      {enable polyX trimming in 3' ends.}
+--poly_x_min_len 20  {the minimum length to detect polyX in the read tail. 10 by default. (int [=10])}
+
+
+
+bowtie2
+
+rRNA removal 
+--very-sensitive-local -D 20 -R 3 -N 0 -L 20 -i S,1,0.50
+
+Alignment
+
+-D 20	      give up extending after <int> failed extends in a row (15)
+-R 3          for reads w/ repetitive seeds, try <int> sets of seeds (2)
+-N 1          max # mismatches in seed alignment; can be 0 or 1 (0)
+-L 20         length of seed substrings; must be >3, <32 (22)
+-i S,1,0.50   interval between seed substrings w/r/t read len (S,1,1.15)
+--end-to-end  entire read must align; no clipping (on)
+-k 15         report up to <int> alns per read; MAPQ not meaningful
+--no-unal     suppress SAM records for unaligned reads
