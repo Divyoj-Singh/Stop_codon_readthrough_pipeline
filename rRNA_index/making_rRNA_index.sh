@@ -1,0 +1,2 @@
+bowtie2-build rRNA_tRNA_snRNA_snoRNA_and_miRNA.fasta rRNA_index
+
